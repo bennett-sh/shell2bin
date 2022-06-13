@@ -1,6 +1,5 @@
 # 🐚 shell2bin
-### A (very) simple program to package shell scripts (sh, bat, ...) as executables
-<br/>
+#### A (very) simple program to package shell scripts (sh, bat, ...) as executables
 
 # ✏️ Usage
 ```shell2bin <path to shell script>```
@@ -9,8 +8,8 @@
 - g++ (install using MinGW on Windows)
 
 # 💠 Installation
-1. [Download a shell2bin executable](https://github.com/timtrayler/shell2bin/releases/latest) or [build them from source](#building-from-source)
-2. Add them to PATH
+1. [Download a shell2bin executable](https://github.com/timtrayler/shell2bin/releases/latest) or [build one from source](#%EF%B8%8F-building-from-source)
+2. Add it to PATH
 3. Done
 
 # 🛠️ Building from source
