@@ -7,6 +7,7 @@ int main(){return system(std::string(\"")
 
 #include <iostream>
 #include <fstream>
+#include <sstream>
 #include <string>
 #include <regex>
 
@@ -55,6 +56,32 @@ string escapeScript(string &script)
     replace(script.begin(), script.end(), '\n', '&');
 }
 
+vector<string> split(string str, char delimiter)
+{
+    vector<string> result;
+    stringstream strs(str);
+    string token;
+
+    while (getline(strs, token, delimiter))
+    {
+        result.push_back(token);
+    }
+
+    return result;
+}
+
+string stripExtension(string filename) {
+    size_t lastdot = filename.find_last_of(".");
+    
+    if(lastdot == string::npos) return filename;
+
+    return filename.substr(0, lastdot);
+}
+
+string stripPath(string path) {
+    return split(path, '/').back();
+}
+
 
 
 void compile(string script, string out)
@@ -89,7 +116,7 @@ int main(int argc, char *argv[])
 
     cout << "Compiling..." << endl;
 
-    compile(script, "test");
+    compile(script, stripPath(stripExtension(argv[1])));
 
     return EXIT_SUCCESS;
 }
