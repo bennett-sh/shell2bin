@@ -15,6 +15,5 @@
 # 🛠️ Building from source
 To build this project from source you can either run ```/build.sh``` (uses g++) or simply compile ```/src/main.cpp``` using any compiler like g++.
 
-# Known Issues
+# 🐛 Known Issues
 - [ ] Quotes (") currently don't work unless escaped
-- [ ] Everything is currently exported as "test"
