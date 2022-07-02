@@ -116,7 +116,11 @@ int main(int argc, char *argv[])
 
     cout << "Compiling..." << endl;
 
-    compile(script, stripPath(stripExtension(argv[1])));
+    if(argc > 2) {
+        compile(script, argv[2]);
+    } else {
+        compile(script, stripPath(stripExtension(argv[1])));
+    }
 
     return EXIT_SUCCESS;
 }

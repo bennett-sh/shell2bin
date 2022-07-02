@@ -2,7 +2,7 @@
 #### A (very) simple program to package shell scripts (sh, bat, ...) as executables
 
 # ✏️ Usage
-```shell2bin <path to shell script>```
+```shell2bin <path to shell script> [<output file>]```
 
 # 📦 Requirements
 - g++ (install using MinGW on Windows)
