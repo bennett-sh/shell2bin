@@ -35,4 +35,4 @@ print("Hello world!")
 ```
 
 # 🐛 Known Issues
-- No issues are currently known
+Currently, there are no issues known. Feel free to report any issues using the Issues-tab.
