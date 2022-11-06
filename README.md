@@ -1,19 +1,38 @@
 # 🐚 shell2bin
-#### A (very) simple program to package shell scripts (sh, bat, ...) as executables
+#### A simple program to package shell scripts (sh, bat, ...) as executables
 
 # ✏️ Usage
-```shell2bin <path to shell script> [<output file>]```
+```shell2bin <script> [<output name without extension>]```
 
 # 📦 Requirements
-- g++ (install using MinGW on Windows)
+- Rust (with cargo & rustc in path)
 
 # 💠 Installation
-1. [Download a shell2bin executable](https://github.com/timtrayler/shell2bin/releases/latest) or [build one from source](#%EF%B8%8F-building-from-source)
-2. Add it to PATH
-3. Done
+1. [Install requirements](#📦-requirements)
+2. Run ```cargo install shell2bin```
+3. Profit.
 
-# 🛠️ Building from source
-To build this project from source you can either run ```/build.sh``` (uses g++) or simply compile ```/src/main.cpp``` using any compiler like g++.
+# 📂 Supported types
+Most script languages should be supported when installed. You will need to specify the language using either a shebang or using a S2B-annotation. Both shebangs and S2B-annotations must be on the first line of the file. The only exception to this are batch files. Here you can add an ```@echo off``` on the line before a S2B-annotation. The syntax of S2B-annotations is the following: ```[Line comment in language; supported: #, "rem " and //]S2B:[program] [<args>]```
+
+Examples:
+```bash
+#!/bin/bash
+ls
+```
+```bat
+@echo off
+rem S2B:cmd.exe /C
+ls
+```
+```bat
+rem S2B:cmd.exe /C
+ls
+```
+```py
+#S2B:python
+print("Hello world!")
+```
 
 # 🐛 Known Issues
-- [ ] Quotes (") currently don't work unless escaped
+- No issues are currently known

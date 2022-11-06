@@ -1,0 +1,8 @@
+[package]
+name = "shell2bin"
+version = "0.1.0"
+edition = "2021"
+description = "A tool for converting shell scripts to executables"
+
+[dependencies]
+tempfile = "3.3.0"
