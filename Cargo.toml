@@ -1,7 +1,10 @@
 [package]
 name = "shell2bin"
-version = "0.1.0"
+version = "2.0.0"
 edition = "2021"
+license = "MIT"
+repository = "https://github.com/bennett-sh/shell2bin"
+homepage = "https://github.com/bennett-sh/shell2bin"
 description = "A tool for converting shell scripts to executables"
 
 [dependencies]
